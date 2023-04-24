@@ -21,22 +21,26 @@
             {foodname:'dad3',foodprice:777},
             {foodname:'dad4',foodprice:1},
         ];
-        /*function showCart() {
+        function showCart() {
             if (cart.length == 0) {
                 document.getElementById("ulcart").innerHTMl = '<li class="list-group-item d-flex jusitfy-content-center">The cart is currently empty<li>'
             }
             else{
+                var total = 0;
                 document.getElementById("ulcart").innerHTMl = "";
                 for(var i=o; i<cart.length; i++) {
-                    document.getElementById("ulcart").innerHTML += '<li>' + cart[i].
+                    total += cart[i].foodprice;
+                    document.getElementById("ulcart").innerHTML += '<li class="list-group-item d-flex justify-content-between"><span class="d-inline-block">' + cart[i] + '</span></li>';
                 }
+                document.getElementById("txttotal").innerHTML = total.toFixed(2);
+                document.getElementById("textfoodcart").value = JSON.stringify(cart);
             }
         }
         function addToCart(event){
             var itemChosen = Number(event.target.id.slice(3,4)) - 1;
             cart.push(menu[itemChosen]);
             showCart();
-        }*/
+        }
     </script>
 
 </head>
