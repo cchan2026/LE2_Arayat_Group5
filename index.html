@@ -38,6 +38,7 @@
             }
         }
         function addToCart(event){
+            alert("I am an alert box! but for Add to Cart");
             var itemChosen = Number(event.target.id.slice(3,4)) - 1;
             cart.push(menu[itemChosen]);
             showCart();
