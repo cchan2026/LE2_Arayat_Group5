@@ -29,9 +29,9 @@
                 var total = 0;
                 document.getElementById("ulcart").innerHTML = "";
                 for(var i=0; i<cart.length; i++) {
-                    document.getElementById("ulcart").innerHTML = "";
+                    document.getElementById("ulcart").innerHTMl = "";
                     total += cart[i].foodprice;
-                    document.getElementById("ulcart").innerHTMl += '<li class="list-group-item d-flex justify-content-between"><span class="d-inline-block">' + cart[i].foodname + '</span><span class="d-inline-block">' + cart[i].foodprice.toFixed(2) + '</span></li>';
+                    document.getElementById("ulcart").innerHTML += '<li class="list-group-item d-flex justify-content-between"><span class="d-inline-block">' + cart[i].foodname + '</span><span class="d-inline-block">' + cart[i].foodprice.toFixed(2) + '</span></li>';
                 }
                 document.getElementById("txttotal").innerHTML = total.toFixed(2);
                 document.getElementById("txtfoodcart").value = JSON.stringify(cart);
