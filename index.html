@@ -33,7 +33,7 @@
                     document.getElementById("ulcart").innerHTML += '<li class="list-group-item d-flex justify-content-between"><span class="d-inline-block">' + cart[i].foodname + '</span><span class="d-inline-block">' + cart[i].foodprice.toFixed(2) + '</span></li>';
                 }
                 document.getElementById("txttotal").innerHTML = total.toFixed(2);
-                document.getElementById("textfoodcart").value = JSON.stringify(cart);
+                document.getElementById("txtfoodcart").value = JSON.stringify(cart);
             }
         }
         function addToCart(event){
