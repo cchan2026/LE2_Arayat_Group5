@@ -23,13 +23,13 @@
         ];
         function showCart() {
             if (cart.length == 0) {
-                document.getElementById("ulcart").innerHTMl = '<li class="list-group-item d-flex jusitfy-content-center">The cart is currently empty</li>';
+                document.getElementById("ulcart").innerHTML = '<li class="list-group-item d-flex jusitfy-content-center">The cart is currently empty</li>';
             }
             else{
                 var total = 0;
-                document.getElementById("ulcart").innerHTMl = "";
+                document.getElementById("ulcart").innerHTML = "";
                 for(var i=0; i<cart.length; i++) {
-                    document.getElementById("ulcart").innerHTMl = "";
+                    document.getElementById("ulcart").innerHTML = "";
                     total += cart[i].foodprice;
                     document.getElementById("ulcart").innerHTML += '<li class="list-group-item d-flex justify-content-between"><span class="d-inline-block">' + cart[i].foodname + '</span><span class="d-inline-block">' + cart[i].foodprice.toFixed(2) + '</span></li>';
                 }
